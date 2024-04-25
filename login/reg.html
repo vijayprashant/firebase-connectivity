@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <script type="module" src="reg.js" defer></script>
+      <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5952d9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #frmRegister p {
+            margin: 0 0 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #frmRegister input[type="text"],
+        #frmRegister input[type="password"],
+        #frmRegister input[type="email"],
+        #frmRegister button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #frmRegister button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #frmRegister button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        p {
+            margin: 5px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+   
+</head>
+<body>
+    <div id="container">
+        <h1>Registration</h1>
+        <form method="post" id="frmRegister">
+            <!-- Registration form fields -->
+            <p>
+                Username: <input type="text" name="username" id="username" required />
+                <span class="error" id="usernameError"></span>
+            </p>
+            <p>
+                Email: <input type="email" name="email" id="email" required />
+                <span class="error" id="emailError"></span>
+            </p>
+            <p>
+                Password: <input type="password" name="password" id="password" required />
+                <span class="error" id="passwordError"></span>
+            </p>
+            <button type="submit" name="submit" id="submit">Register</button>
+        </form>
+        <p>Already a user? <a href="ho.html">Login here</a>.</p>
+    </div>
+</body>
+</html>
